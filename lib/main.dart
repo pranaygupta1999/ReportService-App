@@ -4,20 +4,32 @@
  * @created 31 Oct 2019
  */
 import 'package:flutter/material.dart';
-import './login.dart';
+import './Screens/login.dart';
 
 void main() => runApp(ReportService());
 
 class ReportService extends StatefulWidget {
   @override
   State<ReportService> createState() {
-    return _ReportServiceState(LoginScreen());
+    return ReportServiceState();
   }
 }
 
-class _ReportServiceState extends State<ReportService> {
+class ReportServiceState extends State<ReportService> {
   Widget homeWidget;
-  _ReportServiceState(this.homeWidget);
+  ReportServiceState();
+
+  @override
+  void initState() {
+    super.initState();
+    homeWidget = LoginScreen(this);
+  }
+
+  void changeHomeScreen(Widget home) {
+    homeWidget = home;
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
