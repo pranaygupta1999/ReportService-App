@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:reportservice/Components/ClickableCard.dart';
+import 'package:reportservice/Components/ClickableAppList.dart';
 import 'package:reportservice/Models/Apps.dart';
 import '../Models/User.dart';
+import './logsScreen.dart';
 
 class Home extends StatefulWidget {
   final User user;
@@ -22,6 +23,7 @@ class _HomeState extends State<Home> {
   }
   void onTapHandler(Apps app){
     print(app.appName);
+    Navigator.push(context, MaterialPageRoute( builder: (context) => LogsScreen(app) ));
   }
   void makeRequest() async {
     List<Apps> userApps = await widget.user.getAllApps();
