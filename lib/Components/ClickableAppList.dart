@@ -13,6 +13,7 @@ class ClickableAppList extends StatelessWidget {
           onTapHandler(app);
         },
         child: Container(
+          
           padding: EdgeInsets.all(8),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,15 +41,19 @@ class ClickableAppList extends StatelessWidget {
                   ),
                   Text(
                     "Description:",
-                    style: TextStyle(fontSize: 12),
                   ),
-                  Text(
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.72,
+                    child: Text(
                     app.description,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 3,
+                    softWrap: true,
                     style: TextStyle(
                       color: Colors.black54,
                       fontSize: 10,
                     ),
-                  )
+                  ),)
                 ],
               )
             ],
