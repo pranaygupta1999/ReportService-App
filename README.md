@@ -1,16 +1,28 @@
-# reportservice
+# Report Service App
+The app for displaying all the apps and logs of a particular company.
 
-A new Flutter project.
+## The idea
+There are lot of companies whose apps are being used by the users worldwide. It becomes crucial for the company to identify if the app works properly.
 
-## Getting Started
+This is where the Error Logging and reporting System comes into play. The Report service provides set of tools and software to deal with the errors and logs being thrown by apps used by people worldwide.
 
-This project is a starting point for a Flutter application.
+### Tools and Softwares under ReportService
+ - **A framework** - Used by developer instead of using traditional console logs the framework provides logging the error directly to our server
+ - **The Server** - Connects to the database and post all error to the database post validation.
+ - **The App** - The app provides the way to see all the errors logged by the apps of the particular company.
+    - Each developer of the company gets an account for the usage of the app
+- **The Database** - The mysql database to keep the record of al the _companies_, their _developers(users)_ and their _apps_(web or mobile) and the _errors_ logged by these apps
 
-A few resources to get you started if this is your first Flutter project:
+## Starting the App
+ - Clone the repository
+ - Start the mysql server(Insertion and table creation query can be found in the seperate repo of this project)
+  - Start the server. [Clone this repo](https://github.com/pranaygupta1999/ReportService-Server.git)
+ - Change the server url in `./lib/Models/data.dart` file
+- Run the command `flutter run android`
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Project structure [src]
+ - Starting point is `./lib/main.dart`
+ - All Screens are defined in `./lib/Screens/`
+ - All components are in `./lib/Components/`
+ - All Models for server response objects and server calls are in `./lib/Models/`
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
