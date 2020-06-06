@@ -1,6 +1,11 @@
 # Report Service App
 The app for displaying all the apps and logs of a particular company.
 
+### Download the APK : [Download apk](https://github.com/pranaygupta1999/ReportService-App/releases/download/1.0/app-release.apk)
+
+### Release Link:
+https://github.com/pranaygupta1999/ReportService-App/releases/download/1.0/app-release.apk
+
 ## The idea
 There are lot of companies whose apps are being used by the users worldwide. It becomes crucial for the company to identify if the app works properly.
 
@@ -13,7 +18,7 @@ This is where the Error Logging and reporting System comes into play. The Report
     - Each developer of the company gets an account for the usage of the app
 - [**The Database**](https://github.com/pranaygupta1999/ReportService-database.git) - The mysql database to keep the record of al the _companies_, their _developers(users)_ and their _apps_(web or mobile) and the _errors_ logged by these apps
 
-## Starting the App
+## Debugging the App 
  - Clone the repository
  - Start the mysql server([Clone this repo](https://github.com/pranaygupta1999/ReportService-database.git) for data insertion and table creation query)
   - Start the server. [Clone this repo](https://github.com/pranaygupta1999/ReportService-Server.git)
