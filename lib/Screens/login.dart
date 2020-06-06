@@ -30,6 +30,8 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    usernameController.text = "pranaygupta1999@gmail.com";
+    passwordController.text = "admin";
     return Scaffold(body: Builder(builder: (BuildContext context) {
       return Container(
         padding: EdgeInsets.all(25),
